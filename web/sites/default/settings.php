@@ -23,7 +23,7 @@ include __DIR__ . "/settings.pantheon.php";
  *
  * https://www.drupal.org/project/drupal/issues/3091285
  */
-// $settings['skip_permissions_hardening'] = TRUE;
+$settings['skip_permissions_hardening'] = TRUE;
 
 /**
  * If there is a local settings file, then include it
@@ -32,13 +32,3 @@ $local_settings = __DIR__ . "/settings.local.php";
 if (file_exists($local_settings)) {
   include $local_settings;
 }
-
-/* $databases['default']['default'] = array (
-  'database' => 'pantheon',
-  'username' => 'pantheon',
-  'prefix' => '',
-  'host' => '127.0.0.1',
-  'port' => '3306',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-); */
